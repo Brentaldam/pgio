@@ -2,12 +2,13 @@
 const express = require("express");
 const app = express();
 const { Pool } = require('pg');
-require('dotenv').config();
 const multer = require("multer");
 const upload = multer();
+require('dotenv').config();
+
 
 const pool = new Pool({
-connectionString: process.env.DATABASE_URL,
+    connectionString: "postgres://wszzsnwu:C6OLWTU80lpITBDKf0184Ew3pjREvAOH@heffalump.db.elephantsql.com/wszzsnwu",
 ssl: {
 rejectUnauthorized: false
 },
